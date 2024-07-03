@@ -1,9 +1,11 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:bookworm-20240429
 
-RUN install_packages gnupg \
-    echo "deb http://archive.raspberrypi.org/debian/ bookworm main" > /etc/apt/sources.list.d/raspi.list \
-      && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 82B129927FA3303E \
-    install_packages \
+RUN install_packages gnupg
+
+RUN  echo "deb http://archive.raspberrypi.org/debian/ bookworm main" > /etc/apt/sources.list.d/raspi.list \
+      && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 82B129927FA3303E
+
+RUN install_packages \
     libcamera-dev \
     libcamera-apps \
     v4l-utils
