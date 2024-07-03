@@ -5,7 +5,7 @@ RUN install_packages gnupg \
       && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 82B129927FA3303E \
     install_packages \
     libcamera-dev \
-    libcamera-apps-lite \
+    libcamera-apps \
     v4l-utils
 
 WORKDIR /usr/src/app
