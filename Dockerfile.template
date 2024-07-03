@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:bookworm
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:bullseye-20240429
 
 RUN install_packages \
     libcamera-dev \
